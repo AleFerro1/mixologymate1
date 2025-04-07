@@ -1,0 +1,39 @@
+img{
+    max-width: 70px;
+}
+a{
+    text-decoration: none;
+    color: aquamarine;
+    border-radius: 10px;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.box {
+    text-align: center;
+}
+.listaDrinkButtonDiv {
+    text-align: center;
+    padding: 25px;
+}
+.LoginButtonDiv{
+    text-decoration: none;
+    padding: 25px;
+    border-radius: 10px;
+}
+.LoginButton{
+    padding: 10px;
+    border-radius: 20px;
+    background-color: aquamarine;
+    color: white;
+}
+.SocialIcon{
+    max-width: 30px;
+    padding: 2px;
+}
+.SocialContainer{
+    display: flex;
+    justify-content: center;
+}

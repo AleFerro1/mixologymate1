@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fafafa;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+form {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+input, select {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+select {
+    cursor: pointer;
+}
+
+input[type="submit"] {
+    background-color: #3897f0;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #2779b3;
+}
+
+label {
+    font-size: 1rem;
+    color: #666;
+    font-weight: bold;
+}
+
+.ingredient-select {
+    width: 100%;
+    font-size: 1rem;
+}
+
+.ingredient-select optgroup {
+    font-weight: bold;
+}
+
+.ingredient-select option {
+    padding: 8px;
+}
+
+.back-button {
+    margin-top: 20px;
+    text-decoration: none;
+    color: #3897f0;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.back-button:hover {
+    color: #2779b3;
+}

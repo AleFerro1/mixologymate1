@@ -1,0 +1,30 @@
+img{
+    width: 100px;
+    height: auto;
+}
+a{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    top: 100%;
+}
+body{
+    text-align: center;
+}
+table {
+    width: 100%; 
+    border-collapse: collapse;
+    border-radius: 20px;
+}
+th, td {
+    border: 1px solid black; 
+    padding: 10px; 
+    text-align: left; 
+}
+th {
+    background-color:hsl(189, 100.00%, 53.50%);
+}
+td{
+    background-color:rgb(255, 10, 10);
+}

@@ -1,0 +1,23 @@
+
+table {
+    width: 100%; 
+    border-collapse: collapse;
+    border-radius: 20px;
+}
+    th, td {
+    border: 1px solid black; 
+    padding: 10px; 
+    text-align: left; 
+}
+th {
+    background-color:hsl(189, 100.00%, 53.50%);
+}
+td{
+    background-color:rgb(255, 10, 10);
+}
+h1{
+    text-align: center;
+}
+a{
+    text-decoration: none;
+}
