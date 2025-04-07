@@ -1,0 +1,323 @@
+
+body {
+    background: linear-gradient(135deg, rgba(144, 255, 248, 0.5), rgba(4, 0, 115, 0.8), rgba(11, 133, 117, 0.5));
+    margin: 0;
+    padding: 0;
+    
+}
+
+.container {
+    max-width: 1400px; /* Larghezza massima del contenuto */
+    margin: 0 auto; /* Centra il contenitore orizzontalmente */
+    padding: 20px; /* Spaziatura interna */
+    background-color: white; /* Colore di sfondo */
+    border: 1px solid rgb(227, 227, 227); /* Bordo */
+    border-radius: 5px;
+}
+
+.barraSopra {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    padding: 10px;
+}
+
+.logoHome {
+    height: 60px;
+    width: 60px;
+}
+
+.listaDrink {
+    font-size: 50px;
+    font-family: 'Gill Sans';
+    font-weight: 200;
+    margin: 1px;
+}
+
+.bottoneAccedi {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-family: Arial;
+    font-weight: bold;
+    border-color: solid black;
+    border-radius: 100px;
+    padding: 13px 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.bottoneAccedi:hover {
+    background-color: rgb(56, 56, 56);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.sceltaIngredienti {
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: center; /* Centra il testo orizzontalmente */
+    margin: 130px 0; /* Spaziatura sopra e sotto */
+}
+
+.cheIngredientiHai {
+    margin: 0;
+}
+
+/* Nuovo contenitore per la barra di ricerca */
+.search-section {
+    display: flex;
+    justify-content: center; /* Centra la barra di ricerca orizzontalmente */
+    margin: 20px 0; /* Spaziatura sopra e sotto */
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    padding: 5px 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Occupa tutto lo spazio disponibile */
+    max-width: 600px; /* Larghezza massima della barra di ricerca */
+}
+
+#search-input {
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 16px;
+    width: 100%; /* Occupa tutto lo spazio disponibile */
+    border-radius: 25px;
+}
+
+#search-button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    white-space: nowrap; /* Previene il testo a capo */
+}
+
+#search-button:hover {
+    background-color: #0056b3;
+}
+.immagineProfilo{
+    width: 55px;
+    height: 55px;
+}
+.search-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Spaziatura tra elementi */
+}
+
+.search-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px; /* Larghezza massima */
+    display: flex;
+    gap: 10px; /* Spazio tra input e pulsante */
+}
+
+#suggestions-container {
+    position: absolute;
+    top: 100%; /* Posiziona il contenitore subito sotto l'input */
+    left: 0;
+    right: 0;
+    margin-top: 5px; /* Piccolo spazio tra input e suggerimenti */
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Assicura che sia sopra altri elementi */
+}
+
+
+
+#search-input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.suggestion-item {
+    padding: 12px 20px;
+    color: #333;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.2s;
+}
+
+.suggestion-item:last-child {
+    border-bottom: none;
+}
+
+.suggestion-item:hover {
+    background-color: #f8f9fa;
+}
+.selected-ingredient {
+    display: inline-block;
+    background: #e0e0e0;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+#suggestions-container {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+.MMChoice {
+    margin-top: 150px;
+    width: 1000px;
+    align-self: center;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    /* Aggiungi altezza fissa o aspect-ratio */
+    height: 450px; /* Modifica secondo necessità */
+    z-index: 10; /* Porta il link sopra gli altri elementi */
+    display: block; /* Assicura che il link occupi tutto lo spazio disponibile */
+}
+
+.MMChoice img {
+    width: 1000px;
+    height: 100%;
+    object-fit: cover; /* Mantiene le proporzioni */
+    transition: all 0.3s ease;
+}
+
+.MMChoice::after {
+    content: 'Scopri di più';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+    pointer-events: none; /* Permette di cliccare attraverso il testo */
+    
+}
+
+.MMChoice:hover::after {
+    opacity: 1;
+}
+
+/* Aggiungi questo per lo sfondo semitrasparente */
+.MMChoice::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+    pointer-events: none; /* Aggiunto per permettere il click al link */
+}
+
+.MMChoice:hover::before {
+    opacity: 1;
+}
+.socialsAboutUs{
+    margin-top: 400px;
+    align-self: center;
+    font-size: 40px;
+    font-family: 'Didact Gothic';
+    
+}
+.socialsDiv{
+    align-self: center;
+    
+}
+.socials{
+    width: 100px;
+    height: 100px;
+    transition: transform 0.8s ease
+}
+.socials:hover {
+    transform: translateY(-4px);
+    
+    transition: transform 0.5s ease
+}
+.top-drinks-section {
+    position: relative;
+    padding: 40px 60px;
+    background: #fff;
+}
+
+.drinks-scroller {
+    display: flex;
+    overflow-x: hidden;
+    gap: 25px;
+    padding: 20px 0;
+    scroll-behavior: smooth;
+}
+
+.drink-card {
+    flex: 0 0 300px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s;
+}
+
+.drink-card:hover {
+    transform: translateY(-5px);
+}
+
+.drink-thumbnail img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 3px solid #eee;
+}
+
+.drink-content {
+    padding: 15px;
+}
+
+.drink-name {
+    margin: 0 0 10px 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.rating {
+    color: #ffb700;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.reviews-count {
+    color: #666;
+    font-size: 0.9em;
+    margin-left: 5px;
+}
+
+.drink-description {
+    color: #666;
+    font-size: 0.95em;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
